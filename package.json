@@ -1,0 +1,1 @@
+{"name":"ph-currency","version":"1.0.0","description":"Philippine Peso utilities","main":"dist/index.js","types":"dist/index.d.ts","scripts":{"build":"tsc","test":"jest"},"keywords":["philippines","currency","peso"],"author":"kon2raya","license":"MIT","devDependencies":{"typescript":"^5.9.0","jest":"^30.0.0","@types/jest":"^30.0.0"}}
