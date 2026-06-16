@@ -1,1 +1,65 @@
-{"name":"ph-currency","version":"1.0.0","description":"Philippine Peso utilities","main":"dist/index.js","types":"dist/index.d.ts","scripts":{"build":"tsc","test":"jest"},"keywords":["philippines","currency","peso"],"author":"kon2raya","license":"MIT","devDependencies":{"typescript":"^5.9.0","jest":"^30.0.0","@types/jest":"^30.0.0"}}
+{
+  "name": "ph-currency",
+  "version": "1.0.0",
+  "description": "Comprehensive Philippine Peso (₱) utilities — formatting, conversion, tax calculations, denominations, and validation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test:verbose": "jest --verbose",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "philippines",
+    "peso",
+    "php",
+    "currency",
+    "formatting",
+    "tax",
+    "vat",
+    "withholding-tax",
+    "income-tax",
+    "bir",
+    "exchange-rate",
+    "conversion",
+    "denomination",
+    "sss",
+    "philhealth",
+    "pag-ibig",
+    "hdmf",
+    "train-law",
+    "create-act",
+    "philippine-peso",
+    "peso-format",
+    "currency-converter"
+  ],
+  "author": "kon2raya",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kon2raya24/ph-currency.git"
+  },
+  "homepage": "https://github.com/kon2raya24/ph-currency#readme",
+  "bugs": {
+    "url": "https://github.com/kon2raya24/ph-currency/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "jest": "^30.0.0",
+    "@types/jest": "^30.0.0",
+    "ts-jest": "^29.0.0"
+  }
+}
