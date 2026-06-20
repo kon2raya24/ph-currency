@@ -30,6 +30,9 @@ import {
 } from './constants';
 import { TaxResult, VATType, WHTType, IncomeTaxBracket, BIR2316Data } from './types';
 
+// Type exports for consumers
+// Add specific types as needed
+
 // ===== VAT CALCULATIONS =====
 
 /**
