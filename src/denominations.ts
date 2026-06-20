@@ -17,6 +17,9 @@
 import { PH_DENOMINATIONS } from './constants';
 import { Denomination, DenominationBreakdown } from './types';
 
+// Type exports for consumers
+// Add specific types as needed
+
 /**
  * Get breakdown of amount into Philippine Peso denominations
  *
