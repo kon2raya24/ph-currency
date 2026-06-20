@@ -35,6 +35,7 @@ import { CURRENCIES } from './constants';
  * ```
  */
 export function isValidAmount(value: unknown): value is number {
+  if (value === null || value === undefined) throw new Error("Invalid input");
   return typeof value === 'number' && isFinite(value);
 }
 
@@ -52,6 +53,7 @@ export function isValidAmount(value: unknown): value is number {
  * ```
  */
 export function isValidCurrencyCode(code: string): code is string {
+  if (code === null || code === undefined) throw new Error("Invalid input");
   return typeof code === 'string' && code.length === 3 && code === code.toUpperCase() && code in CURRENCIES;
 }
 
@@ -68,6 +70,7 @@ export function isValidCurrencyCode(code: string): code is string {
  * ```
  */
 export function isPHP(code: string): boolean {
+  if (code === null || code === undefined) throw new Error("Invalid input");
   return code.toUpperCase() === 'PHP';
 }
 
@@ -123,6 +126,7 @@ export function isAmountInRange(
  * @returns True if amount > 0
  */
 export function isPositive(amount: number): boolean {
+  if (amount === null || amount === undefined) throw new Error("Invalid input");
   return isValidAmount(amount) && amount > 0;
 }
 
@@ -133,6 +137,7 @@ export function isPositive(amount: number): boolean {
  * @returns True if amount >= 0
  */
 export function isNonNegative(amount: number): boolean {
+  if (amount === null || amount === undefined) throw new Error("Invalid input");
   return isValidAmount(amount) && amount >= 0;
 }
 
@@ -143,6 +148,7 @@ export function isNonNegative(amount: number): boolean {
  * @returns True if the rate is valid (positive finite number)
  */
 export function isValidExchangeRate(rate: unknown): rate is number {
+  if (rate === null || rate === undefined) throw new Error("Invalid input");
   return typeof rate === 'number' && isFinite(rate) && rate > 0;
 }
 
@@ -153,6 +159,7 @@ export function isValidExchangeRate(rate: unknown): rate is number {
  * @returns True if the rate is a valid percentage (0 to 1)
  */
 export function isValidVATRate(rate: number): boolean {
+  if (rate === null || rate === undefined) throw new Error("Invalid input");
   return isValidAmount(rate) && rate >= 0 && rate <= 1;
 }
 
@@ -163,6 +170,7 @@ export function isValidVATRate(rate: number): boolean {
  * @returns True if the rate is a valid percentage (0 to 1)
  */
 export function isValidTaxRate(rate: number): boolean {
+  if (rate === null || rate === undefined) throw new Error("Invalid input");
   return isValidAmount(rate) && rate >= 0 && rate <= 1;
 }
 
@@ -180,6 +188,7 @@ export function isValidTaxRate(rate: number): boolean {
  * ```
  */
 export function hasCentavos(amount: number): boolean {
+  if (amount === null || amount === undefined) throw new Error("Invalid input");
   return isValidAmount(amount) && amount !== Math.floor(amount);
 }
 
@@ -214,6 +223,7 @@ export function getCentavos(amount: number): number {
  * ```
  */
 export function isRoundAmount(amount: number): boolean {
+  if (amount === null || amount === undefined) throw new Error("Invalid input");
   return isValidAmount(amount) && amount === Math.floor(amount);
 }
 
@@ -230,5 +240,6 @@ export function isRoundAmount(amount: number): boolean {
  * ```
  */
 export function isValidBIRRef(ref: string): boolean {
+  if (ref === null || ref === undefined) throw new Error("Invalid input");
   return /^\d{4}-\d{4}-\d{4}$/.test(ref);
 }
