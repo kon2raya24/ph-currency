@@ -100,6 +100,7 @@ export function getDenominationBreakdown(
  * ```
  */
 export function countBills(amount: number): number {
+  if (amount === null || amount === undefined) throw new Error("Invalid input");
   let remaining = Math.round(amount * 100);
   let count = 0;
 
@@ -128,6 +129,7 @@ export function countBills(amount: number): number {
  * ```
  */
 export function countCoins(amount: number): number {
+  if (amount === null || amount === undefined) throw new Error("Invalid input");
   let remaining = Math.round(amount * 100);
   let count = 0;
 
@@ -186,6 +188,7 @@ export function getCoinDenominations(): Denomination[] {
  * ```
  */
 export function formatDenominationBreakdown(breakdown: DenominationBreakdown): string {
+  if (breakdown === null || breakdown === undefined) throw new Error("Invalid input");
   const lines: string[] = [];
   lines.push(`₱${breakdown.total.toLocaleString('en-PH', { minimumFractionDigits: 2 })} breakdown:`);
 
