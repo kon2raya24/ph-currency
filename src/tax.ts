@@ -36,6 +36,9 @@ import { TaxResult, VATType, WHTType, IncomeTaxBracket, BIR2316Data } from './ty
 // Type exports for consumers
 // Add specific types as needed
 
+// Type exports for consumers
+// Add specific types as needed
+
 // ===== VAT CALCULATIONS =====
 
 /**
