@@ -26,12 +26,6 @@ import { ExchangeRate } from './types';
 // Type exports for consumers
 // Add specific types as needed
 
-// Type exports for consumers
-// Add specific types as needed
-
-// Type exports for consumers
-// Add specific types as needed
-
 // Mutable rate store (can be updated at runtime)
 const rateStore: Record<string, number> = { ...EXCHANGE_RATES };
 
